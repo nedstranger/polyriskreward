@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyRiskReward - Essays, Newsletter, Podcast, Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+        :root {
+            /* Lighter Color Scheme */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --color-light: #FAFAFA; /* Near-white background */
+            --color-dark: #222222; /* Dark text and accents */
+            --color-accent: #8A4B00; /* Richer, earthy accent color */
+            --color-secondary-accent: #A6A29C; /* Subtle accent/border */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background-color: var(--color-light); /* Swapped background */
+            color: var(--color-dark); /* Swapped text color */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Lighter header with subtle shadow */
+            background: rgba(250, 250, 250, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(5px);
+            transition: background 0.3s ease;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+
+        nav a {
+            color: var(--color-dark); /* Swapped link color */
+            text-decoration: none;
+            margin-left: 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--color-dark); /* Dark border */
+            color: var(--color-dark);
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: var(--color-dark); /* Dark background on hover */
+            color: var(--color-light); /* Light text on hover */
+            border-color: var(--color-dark);
+        }
+
+        /* --- Hero Section (Simplified for a brand/writer page) --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Reduced height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--color-light); /* Solid light background for simplicity */
+            padding-top: 5rem;
+        }
+
+        /* Remove the video overlay for the light theme, or use a background image */
+        .hero-video {
+            display: none;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: 5rem;
+            font-weight: 700; /* Bolder for impact */
+            line-height: 1;
+            margin: 0;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            color: var(--color-accent); /* Use accent color for main title */
+        }
+
+        .hero-content p {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--color-dark);
+        }
+
+        .streaming-links a {
+            color: var(--color-dark);
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .streaming-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 6rem 0; /* Slightly reduced padding */
+            background-color: var(--color-light);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--color-dark);
+        }
+
+        /* --- Essays/Articles Section --- */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .article-card {
+            border: 1px solid var(--color-secondary-accent); /* Light border */
+            padding: 1.5rem;
+            background-color: var(--color-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--color-dark);
+        }
+
+        .article-card p {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+
+        .article-card a {
+            font-family: var(--font-sans);
+            color: var(--color-accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Newsletter Section (Substack Embed) --- */
+        #newsletter .container {
+            max-width: 600px;
+            text-align: center;
+        }
+        #newsletter h2 {
+            margin-bottom: 1rem;
+        }
+        #newsletter p {
+            font-family: var(--font-sans);
+            margin-bottom: 2rem;
+        }
+        /* Style for a placeholder Substack embed */
+        .substack-embed {
+            padding: 2rem;
+            border: 2px dashed var(--color-secondary-accent);
+            background-color: rgba(0, 0, 0, 0.02);
+            font-family: var(--font-sans);
+            color: var(--color-dark);
+        }
+        .substack-embed input[type="email"] {
+            padding: 0.75rem;
+            width: 70%;
+            margin-right: 1rem;
+            border: 1px solid var(--color-secondary-accent);
+            font-family: var(--font-sans);
+        }
+        .substack-embed button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background-color: var(--color-accent);
+            color: var(--color-light);
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .substack-embed button:hover {
+            background-color: var(--color-dark);
+        }
+
+
+        /* --- Generic Content Sections (Book, About, Podcast) --- */
+        .content-section {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .content-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-image {
+            flex: 1; /* Make image container take up space */
+            max-width: 400px; /* Constrain image size */
+            margin: 0 auto;
+        }
+
+        .content-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+            border: 1px solid var(--color-secondary-accent);
+        }
+
+        .content-text {
+            flex: 2; /* Make text container larger than image */
+        }
+
+        .content-text h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+
+        .content-text p {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--color-dark);
+        }
+
+        /* --- Button Style (General) --- */
+        .button {
+            position: relative;
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--color-dark); /* Dark border */
+            color: var(--color-dark);
+            text-decoration: none;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            overflow: hidden;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+        }
+
+        /* Remove the shine effect for a cleaner look */
+        .button::before {
+            content: none;
+        }
+
+
+        /* --- Contact Form (Adjusted for light theme) --- */
+        #contact {
+            text-align: center;
+        }
+        .contact-form {
+            margin-top: 2rem;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            background: none;
+            border: 1px solid var(--color-secondary-accent);
+            color: var(--color-dark);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: var(--color-accent);
+            outline: none;
+        }
+        .contact-form input::placeholder, .contact-form textarea::placeholder {
+            color: rgba(34, 34, 34, 0.5);
+        }
+        .contact-form button {
+            background: var(--color-dark);
+            color: var(--color-light);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: var(--color-accent);
+        }
+
+
+        /* --- Horizontal rule --- */
+        hr {
+            border: none;
+            height: 1px;
+            background: var(--color-secondary-accent); /* Light accent rule */
+            margin: 4rem auto;
+            width: 50%;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--color-secondary-accent);
+        }
+        footer p {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            opacity: 0.7;
+            color: var(--color-dark);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .content-section {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .content-section.reverse {
+                flex-direction: column;
+            }
+            header {
+                padding: 1rem;
+            }
+            nav {
+                display: none;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+            .content-text {
+                flex: 1; /* Reset flex for mobile */
+            }
+            .content-image {
+                max-width: 100%;
+            }
+            .contact-form form {
+                padding: 0 1rem;
+            }
+            .substack-embed input[type="email"] {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PolyRiskReward</div>
+        <nav>
+            <a href="#essays">Essays</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#podcast">Podcast</a>
+            <a href="#book">Book</a>
+            <a href="#about">About Me</a>
+            <a href="#contact" class="contact-button">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>PolyRiskReward</h1>
+            <p>Navigating Risk, Reward, and the Human Condition</p>
+            <div class="streaming-links" style="margin-top: 2rem;">
+                <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://yourpodcast.com" target="_blank" title="Podcast"><i class="fas fa-microphone-alt"></i></a>
+                <a href="https://your-substack.com" target="_blank" title="Substack Newsletter"><i class="fas fa-envelope-open-text"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="essays" class="container">
+        <h2 class="section-title">Latest Essays</h2>
+        <div class="articles-grid">
+            <div class="article-card">
+                <h3>The Paradox of Predictability</h3>
+                <p>Exploring how our desire for certainty often blinds us to true risk, using examples from market bubbles and personal choices.</p>
+                <a href="https://your-substack.com/p/essay-1" target="_blank">Read the Essay →</a>
+            </div>
+            <div class="article-card">
+                <h3>Beyond Binary: A Poly-Risk Framework</h3>
+                <p>An argument for moving past simple 'yes/no' risk analysis to embrace a multi-dimensional perspective on outcomes and incentives.</p>
+                <a href="https://your-substack.com/p/essay-2" target="_blank">Read the Essay →</a>
+            </div>
+            <div class="article-card">
+                <h3>The Subtle Art of Value Creation</h3>
+                <p>A deep dive into how sustainable reward comes not from chasing quick gains but from building long-term, antifragile value.</p>
+                <a href="https://your-substack.com/p/essay-3" target="_blank">Read the Essay →</a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="newsletter" class="container">
+        <h2 class="section-title">Join the Newsletter</h2>
+        <p>Get the latest essays, exclusive content, and insights delivered straight to your inbox.</p>
+        
+        <div class="substack-embed">
+            <p>Sign up here to receive the **PolyRiskReward** weekly newsletter:</p>
+            <form action="YOUR_SUBSTACK_EMBED_FORM_ACTION" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 1rem;">Powered by Substack</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="podcast" class="container">
+        <h2 class="section-title">The Podcast: Latest Episode</h2>
+        <div class="content-section">
+            <div class="content-image">
+                <img src="https://placehold.co/600x600/FAFAFA/222222?text=PODCAST+ART" alt="Placeholder for podcast art">
+            </div>
+            <div class="content-text">
+                <h3>The Asymmetry of Information</h3>
+                <p>In this episode, we discuss how access and interpretation of information create unequal risk and reward landscapes for individuals and institutions.</p>
+                <p>Listen now on your favorite platform:</p>
+                <div class="streaming-links" style="font-size: 2.5rem;">
+                    <a href="https://spotify.com/podcast" target="_blank" title="Listen on Spotify"><i class="fab fa-spotify"></i></a>
+                    <a href="https://podcasts.apple.com" target="_blank" title="Listen on Apple Podcasts"><i class="fas fa-podcast"></i></a>
+                    <a href="https://google.com/podcasts" target="_blank" title="Listen on Google Podcasts"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="book" class="container">
+        <h2 class="section-title">My Book: [Book Title]</h2>
+        <div class="content-section reverse">
+            <div class="content-image">
+                <img src="https://placehold.co/600x800/FAFAFA/222222?text=BOOK+COVER" alt="Placeholder for book cover">
+            </div>
+            <div class="content-text">
+                <h3>The [Adjective] Guide to Risk-Adjusted Living</h3>
+                <p>This is a brief description of your book. It explores the principles of **polyriskreward** in depth, offering practical frameworks for making better decisions in finance, career, and relationships.</p>
+                <p>The book challenges conventional wisdom on balancing opportunity and consequence, revealing that true success lies in understanding the complex web of interconnected risks.</p>
+                <a href="https://example.com/buy-your-book" class="button">Pre-Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="content-section">
+            <div class="content-image">
+                <img src="https://placehold.co/600x800/FAFAFA/222222?text=YOUR+PHOTO" alt="Placeholder for a portrait photo of the author">
+            </div>
+            <div class="content-text">
+                <h3>My Journey and Philosophy</h3>
+                <p>I started PolyRiskReward to synthesize my experience in **[Your Professional Field, e.g., finance/tech/academia]** with my passion for philosophy and narrative. I believe the world's most significant challenges and opportunities stem from mispriced risk and misunderstood incentives.</p>
+                <p>My work—from the essays to the podcast—is dedicated to exploring these asymmetries. My goal isn't to provide answers, but to equip you with better questions, helping you navigate uncertainty with clarity and conviction.</p>
+                <p>When I'm not writing, I'm usually **[A personal hobby or detail]**. I live in **[Your Location]** with my family.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p>For speaking requests, collaborations, or general inquiries, please use the form below.</p>
+        <div class="contact-form">
+            <form action="YOUR_FORM_ENDPOINT_HERE" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 PolyRiskReward. All rights reserved.</p>
+        <p>A Project by [Your Name].</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('section, hr');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                // Ensure the Hero section doesn't have the initial animation offset
+                if (section.id !== 'home') {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
+                    section.style.transition = 'opacity 1s ease, transform 1s ease';
+                }
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

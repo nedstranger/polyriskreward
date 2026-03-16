@@ -12,12 +12,12 @@
     :root {
       --font-serif: 'Cormorant Garamond', serif;
       --font-sans: 'Montserrat', sans-serif;
-      --color-bg: #1A1A1A;
-      --color-surface: #232323;
-      --color-text: #F4F4F4;
-      --color-muted: #CFCFCF;
-      --color-accent: #B0A175;
-      --color-border: rgba(176, 161, 117, 0.28);
+      --color-bg: #F6F1E8;
+      --color-surface: #FFFDFC;
+      --color-text: #1E1A17;
+      --color-muted: #5F564E;
+      --color-accent: #A88B4A;
+      --color-border: rgba(168, 139, 74, 0.22);
       --max-width: 1180px;
       --section-padding: 96px;
     }
@@ -60,8 +60,8 @@
       top: 0;
       z-index: 100;
       backdrop-filter: blur(10px);
-      background: rgba(26, 26, 26, 0.88);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(246, 241, 232, 0.9);
+      border-bottom: 1px solid rgba(30, 26, 23, 0.08);
     }
 
     .nav {
@@ -146,8 +146,8 @@
     }
 
     .hero-points span {
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(30,26,23,0.08);
+      background: rgba(255,255,255,0.55);
       color: var(--color-muted);
       padding: 10px 14px;
       border-radius: 999px;
@@ -175,7 +175,7 @@
 
     .btn-primary {
       background: var(--color-accent);
-      color: #111;
+      color: #fff;
       font-weight: 600;
     }
 
@@ -194,11 +194,11 @@
     }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.72));
       border: 1px solid var(--color-border);
       border-radius: 28px;
       padding: 30px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 20px 50px rgba(80, 60, 20, 0.08);
     }
 
     .preorder-card h2 {
@@ -231,8 +231,8 @@
     .field textarea,
     .field select {
       width: 100%;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(30,26,23,0.10);
       border-radius: 14px;
       padding: 14px 16px;
       color: var(--color-text);
@@ -241,7 +241,7 @@
 
     .field input::placeholder,
     .field textarea::placeholder {
-      color: rgba(244,244,244,0.45);
+      color: rgba(30,26,23,0.35);
     }
 
     .field textarea {
@@ -263,7 +263,7 @@
 
     .smallprint {
       margin-top: 14px;
-      color: rgba(244,244,244,0.55);
+      color: rgba(30,26,23,0.55);
       font-size: 0.82rem;
     }
 
@@ -294,8 +294,8 @@
     .description-item {
       padding: 26px;
       border-radius: 24px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.58);
+      border: 1px solid rgba(30,26,23,0.08);
     }
 
     .description-item h3 {
@@ -327,7 +327,7 @@
       text-align: center;
       padding: 24px;
       color: var(--color-muted);
-      background: rgba(255,255,255,0.02);
+      background: rgba(255,255,255,0.4);
       font-size: 0.95rem;
     }
 
@@ -345,8 +345,8 @@
 
     .footer {
       padding: 34px 0 48px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      color: rgba(244,244,244,0.55);
+      border-top: 1px solid rgba(30,26,23,0.08);
+      color: rgba(30,26,23,0.55);
       font-size: 0.9rem;
     }
 
@@ -411,12 +411,13 @@
           <span class="eyebrow">Now taking pre-orders</span>
           <h1>Poly Risk Reward</h1>
           <p class="hero-subtitle">
-            <em>What A Paternity Test Taught Me About Love, Jealousy And Freedom</em></p>
+            <em>What A Paternity Test Taught Me About Love, Jealousy And Freedom</em> — a personal exploration of uncertainty, desire, fatherhood, fear, and what happens when intimate ideals collide with reality.
+          </p>
 
           <div class="hero-points">
             <span>€1 deposit</span>
-            <span>Full price: €16 (+ P&P)</span>
-            <span>Free Hand delivery possible in Vienna</span>
+            <span>Full price €16 + postage</span>
+            <span>Hand delivery possible in Vienna</span>
           </div>
 
           <div class="hero-actions">
@@ -428,7 +429,7 @@
         <aside class="card preorder-card" id="preorder">
           <h2>Reserve your copy</h2>
           <p class="price-note">
-            Pay a €1 deposit now to pre-order. Remaining balance: €15 + postage. Hand delivery possible in Vienna.
+            Pay a €1 deposit now to pre-order. Remaining balance: €15 + postage. Hand delivery may be possible in Vienna.
           </p>
 
           <form class="form-grid" action="#" method="post">
@@ -485,34 +486,20 @@
           </p>
         </div>
 
-        <div class="description-grid">
-          <div class="description-item">
-            <h3>Personal</h3>
-            <p>
-              A first-hand account of love, insecurity, hope, fatherhood, and the emotional fallout of confronting uncertainty at the deepest possible level.
-            </p>
-          </div>
-
-          <div class="description-item">
-            <h3>Philosophical</h3>
-            <p>
-              An exploration of monogamy, non-monogamy, truth, freedom, and whether our ideals can survive contact with real life.
-            </p>
-          </div>
-
-          <div class="description-item">
-            <h3>Uncomfortable</h3>
-            <p>
-              Not a manifesto and not a tidy self-help book — more an honest attempt to think clearly in the middle of fear, longing, jealousy, and love.
-            </p>
-          </div>
+        <div class="about-copy" style="padding: 34px; background: rgba(255,255,255,0.58); border: 1px solid rgba(30,26,23,0.08);">
+          <p>
+            <em>Poly Risk Reward</em> is a relationship memoir and philosophical reckoning about what happened when ideas about openness, honesty, jealousy, possession, and freedom stopped being abstract and became painfully real. It explores the emotional and moral fallout of uncertainty in love, fatherhood, and identity, and asks what remains when intimate ideals collide with fear, desire, and the need for truth.
+          </p>
+          <p>
+            Part personal story and part attempt to think clearly under pressure, the book does not offer a neat manifesto or a tidy set of answers. Instead, it tries to stay with the real questions: what love asks of us, what freedom costs, and whether honesty can survive where the stakes are highest.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container about-grid">
-        <div class="./polyriskreward/assets/images/nedstrangerabout">
+        <div class="photo-placeholder">
           Placeholder for author photo
         </div>
 
@@ -521,13 +508,10 @@
             <h2>About the author</h2>
           </div>
           <p>
-            I'm a songwriter, storyteller and unapologetic oversharer. After graduating from Cambridge with a Law Masters, I moved to London to seek my fortune as a musician, realising too late that I'd done the law-music switch the wrong way round. 
+            Add a short, direct bio here. For example: writer, interviewer, and creator of <em>Poly Risk Reward</em>, exploring relationships, meaning, risk, family, and modern love.
           </p>
           <p>
-            Nonetheless, with my bandmate and best friend Vedantha Kumar, I grew our indie-folk group August and After to millions of listeners across the world with features on Official Spotify playlists, BBC Radio, The Independent, Kerrang! and Songwriting Magazine.  
-          </p>
-          <p>
-            In 2018 I met Anya, a polyamorous, Latvian-born painter and together we moved around Europe before settling in Vienna, where I launched my solo music act Ned Stranger and explored the risks and rewards of open marriage, inadvertently living the story that would become this book.
+            This section works best with 2–3 concise paragraphs and a strong portrait. Keep it personal, but not bloated.
           </p>
           <a href="#preorder" class="btn btn-secondary">Pre-order the book</a>
         </div>

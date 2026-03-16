@@ -1,595 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poly Risk Reward - Conquering Relationship Fear</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poly Risk Reward — Pre-order</title>
+  <meta name="description" content="Pre-order Poly Risk Reward: What A Paternity Test Taught Me About Love, Jealousy And Freedom." />
 
-        :root {
-            /* Lighter Color Scheme */
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Montserrat', sans-serif;
-            --color-light: #FAFAFA; /* Near-white background */
-            --color-dark: #222222; /* Dark text and accents */
-            --color-accent: #8A4B00; /* Richer, earthy accent color */
-            --color-secondary-accent: #A6A29C; /* Subtle accent/border */
-            --color-soft-green: #E6EAE4; /* Footer background */
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    :root {
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Montserrat', sans-serif;
+      --color-bg: #1A1A1A;
+      --color-surface: #232323;
+      --color-text: #F4F4F4;
+      --color-muted: #CFCFCF;
+      --color-accent: #B0A175;
+      --color-border: rgba(176, 161, 117, 0.28);
+      --max-width: 1180px;
+      --section-padding: 96px;
+    }
 
-        body {
-            font-family: var(--font-serif);
-            background-color: var(--color-light); 
-            color: var(--color-dark); 
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        /* --- Header & Navigation --- */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(250, 250, 250, 0.9);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(5px);
-            transition: background 0.3s ease;
-        }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 500;
-            color: var(--color-dark);
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        nav a {
-            color: var(--color-dark); 
-            text-decoration: none;
-            margin-left: 2rem;
-            font-family: var(--font-sans);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        nav a:hover {
-            color: var(--color-accent);
-        }
+    .container {
+      width: min(calc(100% - 48px), var(--max-width));
+      margin: 0 auto;
+    }
 
-        .contact-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid var(--color-dark);
-            color: var(--color-dark);
-            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-        }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(26, 26, 26, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
 
-        .contact-button:hover {
-            background-color: var(--color-dark);
-            color: var(--color-light);
-            border-color: var(--color-dark);
-        }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 24px;
+    }
 
-        /* --- Hero Section (REVERTED to solid light background) --- */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 80vh; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            
-            /* Background Image properties REMOVED */
-            background-color: var(--color-light); 
-            padding-top: 5rem;
-        }
-        
-        .hero-video {
-            display: none;
-        }
+    .brand {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+    }
 
-        /* Overlay for contrast REMOVED */
-        .hero::before {
-            content: none; 
-        }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--color-muted);
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-content h1 {
-            font-family: var(--font-serif);
-            font-size: 5rem;
-            font-weight: 700;
-            line-height: 1;
-            margin: 0;
-            text-transform: capitalize;
-            letter-spacing: 1px;
-            /* Reverted to Dark Text */
-            color: var(--color-dark); 
-            /* Removed text shadow */
-            text-shadow: none; 
-        }
+    .nav-links a:hover,
+    .nav-cta:hover {
+      color: var(--color-accent);
+    }
 
-        .hero-content p {
-            font-family: var(--font-sans);
-            font-size: 1.1rem;
-            font-weight: 400;
-            margin-top: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            /* Reverted to Dark Text */
-            color: var(--color-dark); 
-            /* Removed text shadow */
-            text-shadow: none; 
-        }
+    .nav-cta {
+      border: 1px solid var(--color-accent);
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+    }
 
-        .streaming-links a {
-            /* Reverted to Dark Links */
-            color: var(--color-dark); 
-            margin: 0 0.5rem;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-            /* Removed text shadow */
-            text-shadow: none;
-        }
+    .hero {
+      padding: 84px 0 var(--section-padding);
+    }
 
-        .streaming-links a:hover {
-            color: var(--color-accent);
-        }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 56px;
+      align-items: start;
+    }
 
-        /* --- Sections --- */
-        section {
-            padding: 6rem 0; 
-            background-color: var(--color-light);
-        }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
 
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            font-weight: 300;
-            text-align: center;
-            margin-bottom: 4rem;
-            color: var(--color-dark);
-        }
+    h1, h2 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.05;
+    }
 
-        /* --- Essays/Articles Section --- */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 5.2rem);
+      max-width: 12ch;
+      margin-bottom: 22px;
+    }
 
-        /* Style the raw Substack Embeds to fit the card layout */
-        .substack-post-embed {
-            border: 1px solid var(--color-secondary-accent);
-            padding: 1.5rem;
-            background-color: var(--color-light);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            box-shadow: 0 0 0 transparent; 
-            height: 100%; 
-        }
-        .substack-post-embed:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .substack-post-embed p:first-child {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: var(--color-dark);
-            line-height: 1.2;
-        }
-        .substack-post-embed p:nth-child(2) {
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 1rem;
-            flex-grow: 1; 
-        }
-        .substack-post-embed a {
-            font-family: var(--font-sans);
-            color: var(--color-accent);
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 1rem;
-        }
+    .hero-subtitle {
+      max-width: 620px;
+      font-size: 1.08rem;
+      color: var(--color-muted);
+      margin-bottom: 30px;
+    }
 
-        /* --- Newsletter Section (Substack Embed) --- */
-        #newsletter .container {
-            max-width: 600px;
-            text-align: center;
-        }
-        #newsletter h2 {
-            margin-bottom: 1rem;
-        }
-        #newsletter p {
-            font-family: var(--font-sans);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
 
-        /* --- Generic Content Sections (Book, About, Podcast) --- */
-        .content-section {
-            display: flex;
-            gap: 4rem;
-            align-items: center;
-        }
+    .hero-points span {
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      color: var(--color-muted);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
 
-        .content-section.reverse {
-            flex-direction: row-reverse;
-        }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
 
-        .content-image {
-            flex: 1; 
-            max-width: 400px; 
-            margin: 0 auto;
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid var(--color-accent);
+      transition: 0.25s ease;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
 
-        .content-section img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-            border: 1px solid var(--color-secondary-accent);
-        }
+    .btn-primary {
+      background: var(--color-accent);
+      color: #111;
+      font-weight: 600;
+    }
 
-        .content-text {
-            flex: 2; 
-        }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      opacity: 0.92;
+    }
 
-        .content-text h3 {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            color: var(--color-dark);
-        }
+    .btn-secondary {
+      color: var(--color-text);
+      background: transparent;
+    }
 
-        .content-text p {
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--color-dark);
-        }
+    .btn-secondary:hover {
+      background: rgba(176, 161, 117, 0.08);
+    }
 
-        /* --- Button Style (General) --- */
-        .button {
-            position: relative;
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            border: 1px solid var(--color-dark);
-            color: var(--color-dark);
-            text-decoration: none;
-            font-family: var(--font-sans);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            overflow: hidden;
-            transition: color 0.3s, background-color 0.3s;
-        }
-        
-        .button:hover {
-            background-color: var(--color-dark);
-            color: var(--color-light);
-        }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--color-border);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
 
-        /* Remove the shine effect for a cleaner look */
-        .button::before {
-            content: none;
-        }
+    .preorder-card h2 {
+      font-size: 2.05rem;
+      margin-bottom: 12px;
+    }
 
+    .price-note {
+      color: var(--color-muted);
+      font-size: 0.98rem;
+      margin-bottom: 24px;
+    }
 
-        /* --- Contact Form --- */
-        #contact {
-            text-align: center;
-        }
-        .contact-form {
-            margin-top: 2rem;
-        }
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .contact-form input, .contact-form textarea {
-            background: none;
-            border: 1px solid var(--color-secondary-accent);
-            color: var(--color-dark);
-            padding: 1rem;
-            margin-bottom: 1rem;
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            width: 100%;
-            transition: border-color 0.3s;
-        }
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: var(--color-accent);
-            outline: none;
-        }
-        .contact-form input::placeholder, .contact-form textarea::placeholder {
-            color: rgba(34, 34, 34, 0.5);
-        }
-        .contact-form button {
-            background: var(--color-dark);
-            color: var(--color-light);
-            border: none;
-            padding: 1rem 2.5rem;
-            font-family: var(--font-sans);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .contact-form button:hover {
-            background-color: var(--color-accent);
-        }
+    .form-grid {
+      display: grid;
+      gap: 16px;
+    }
 
+    .field {
+      display: grid;
+      gap: 7px;
+    }
 
-        /* --- Horizontal rule --- */
-        hr {
-            border: none;
-            height: 1px;
-            background: var(--color-secondary-accent); 
-            margin: 4rem auto;
-            width: 50%;
-        }
+    .field label {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+    }
 
-        /* --- Footer (Soft Green Background & Margin) --- */
-        footer {
-            margin-top: 4rem; 
-            padding: 3rem 0;
-            text-align: center;
-            background-color: var(--color-soft-green); 
-            border-top: 1px solid rgba(34, 34, 34, 0.1);
-            color: var(--color-dark);
-        }
-        footer p {
-            font-family: var(--font-sans);
-            font-size: 0.8rem;
-            opacity: 0.8;
-            color: var(--color-dark);
-        }
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: var(--color-text);
+      font: inherit;
+    }
 
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            .content-section {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            .content-section.reverse {
-                flex-direction: column;
-            }
-            header {
-                padding: 1rem;
-            }
-            nav {
-                display: none;
-            }
-            .section-title {
-                font-size: 2.5rem;
-            }
-            .content-text {
-                flex: 1; 
-            }
-            .content-image {
-                max-width: 100%;
-                padding: 0 1rem; 
-            }
-            .content-section img {
-                 max-width: 100%;
-            }
-            .contact-form form {
-                padding: 0 1rem;
-            }
-            .substack-embed input[type="email"] {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-        }
-    </style>
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: rgba(244,244,244,0.45);
+    }
+
+    .field textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--color-muted);
+      font-size: 0.88rem;
+    }
+
+    .checkbox-row input {
+      margin-top: 4px;
+    }
+
+    .smallprint {
+      margin-top: 14px;
+      color: rgba(244,244,244,0.55);
+      font-size: 0.82rem;
+    }
+
+    .section {
+      padding: 0 0 var(--section-padding);
+    }
+
+    .section-header {
+      margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3.4vw, 3.2rem);
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      color: var(--color-muted);
+      max-width: 760px;
+    }
+
+    .description-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .description-item {
+      padding: 26px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .description-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .description-item p {
+      color: var(--color-muted);
+      font-size: 0.96rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .photo-placeholder {
+      aspect-ratio: 4 / 5;
+      border-radius: 28px;
+      border: 1px dashed rgba(176, 161, 117, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--color-muted);
+      background: rgba(255,255,255,0.02);
+      font-size: 0.95rem;
+    }
+
+    .about-copy {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 28px;
+      padding: 34px;
+    }
+
+    .about-copy p {
+      color: var(--color-muted);
+      margin-bottom: 16px;
+    }
+
+    .footer {
+      padding: 34px 0 48px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: rgba(244,244,244,0.55);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .description-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      :root {
+        --section-padding: 72px;
+      }
+
+      .container {
+        width: min(calc(100% - 32px), var(--max-width));
+      }
+
+      .nav {
+        min-height: 70px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .card,
+      .about-copy,
+      .description-item {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 12vw, 4rem);
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">Poly Risk Reward</a>
+      <nav class="nav-links">
+        <a href="#book">The Book</a>
+        <a href="#about">About</a>
+        <a href="#preorder">Pre-order</a>
+      </nav>
+      <a href="#preorder" class="nav-cta">Reserve a copy</a>
+    </div>
+  </header>
 
-    <header>
-        <div class="logo">Poly Risk Reward</div>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#essays">Essays</a>
-            <a href="#newsletter">Newsletter</a>
-            <a href="#podcast">Podcast</a>
-            <a href="#book">Book</a>
-            <a href="#contact" class="contact-button">Contact</a>
-        </nav>
-    </header>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Now taking pre-orders</span>
+          <h1>Poly Risk Reward</h1>
+          <p class="hero-subtitle">
+            <em>What A Paternity Test Taught Me About Love, Jealousy And Freedom</em></p>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Poly Risk Reward</h1>
-            <p>A Forensic Exploration Of A Non-Monogamous Marriage With A Unique Twist</p>
-            <div class="streaming-links" style="margin-top: 2rem;">
-                <a href="https://podcasts.apple.com/gb/podcast/poly-risk-reward/id1835407509" target="_blank" title="Podcast"><i class="fas fa-microphone-alt"></i></a>
-                <a href="https://nedstranger.substack.com" target="_blank" title="Substack Newsletter"><i class="fas fa-envelope-open-text"></i></a>
-                <a href="https://instagram.com/nedstranger" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
+          <div class="hero-points">
+            <span>€1 deposit</span>
+            <span>Full price: €16 (+ P&P)</span>
+            <span>Free Hand delivery possible in Vienna</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#preorder" class="btn btn-primary">Pre-order now</a>
+            <a href="#book" class="btn btn-secondary">Read more</a>
+          </div>
         </div>
+
+        <aside class="card preorder-card" id="preorder">
+          <h2>Reserve your copy</h2>
+          <p class="price-note">
+            Pay a €1 deposit now to pre-order. Remaining balance: €15 + postage. Hand delivery possible in Vienna.
+          </p>
+
+          <form class="form-grid" action="#" method="post">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="field">
+              <label for="city">City / delivery location</label>
+              <input id="city" name="city" type="text" placeholder="Vienna, London, etc." />
+            </div>
+
+            <div class="field">
+              <label for="delivery">Preferred delivery method</label>
+              <select id="delivery" name="delivery">
+                <option>Postage</option>
+                <option>By hand in Vienna</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" placeholder="Anything useful: Vienna district, postage country, questions, etc."></textarea>
+            </div>
+
+            <label class="checkbox-row">
+              <input type="checkbox" required />
+              <span>I understand this is a pre-order with a €1 deposit, and the remaining balance plus any postage will be arranged before delivery.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Pay €1 deposit</button>
+          </form>
+
+          <p class="smallprint">
+            Replace this form action with your Stripe / payment link / embedded checkout. You could also route submissions into Mailchimp, Tally, Formspree, or a custom backend.
+          </p>
+        </aside>
+      </div>
     </section>
 
-    <hr>
-    
-    <section id="about" class="container">
-        <h2 class="section-title">About</h2>
-        <div class="content-section">
-            <div class="content-image">
-                <img src="/assets/images/polyriskreward-nedfred.jpg" alt="Photo of Ned Stranger writing in Siena">
-            </div>
-            <div class="content-text">
-                <p>In 2024, my wife and I found out I’m not our daughter’s biological father. Through essays, podcasts and a longer book, I document this journey, exploring specific topics around open marriage and polyamory.</p>
-                <br>
-                <p>Who am I? My name's Ned Stranger - I'm an English songwriter and unapologetic oversharer. I grew up near Brighton on the south coast of England, moved to Cambridge to study law, then turned my back on a well paid lawyer job to settle in London and explore the music scene. In 2018 I met Anya and entered the world of non-monogamy. In 2022, we moved to Vienna (Austria) where we've lived ever since.</p> 
-            </div>
+    <section class="section" id="book">
+      <div class="container">
+        <div class="section-header">
+          <h2>About the book</h2>
+          <p>
+            A relationship memoir and philosophical reckoning, <em>Poly Risk Reward</em> looks at what happened when ideas about openness, honesty, jealousy, possession, and freedom stopped being abstract and became painfully real.
+          </p>
         </div>
-    </section>
 
-    <hr>
+        <div class="description-grid">
+          <div class="description-item">
+            <h3>Personal</h3>
+            <p>
+              A first-hand account of love, insecurity, hope, fatherhood, and the emotional fallout of confronting uncertainty at the deepest possible level.
+            </p>
+          </div>
 
-    <section id="essays" class="container">
-        <h2 class="section-title">Essays</h2>
-        <div class="articles-grid">
-            
-            <div class="substack-post-embed"><p lang="en">9. "How did you stop feeling jealous?" by Ned Stranger</p><p>What does a spilled pint of IPA have to do with unpacking my jealousy?</p><a data-post-link href="https://nedstranger.substack.com/p/detailed-guide-how-i-unpacked-my">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-            
-            <div class="substack-post-embed"><p lang="en">7. “Why do you want to date other people?” by Ned Stranger</p><p>What are the fundamental needs fulfilled by dating other people?</p><a data-post-link href="https://nedstranger.substack.com/p/7-why-do-you-want-to-date-other-people">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-            
-            <div class="substack-post-embed"><p lang="en">5. "Why did she want to stay with her lover? Were you not enough?" by Ned Stranger</p><p>Help with this insecurity came from an unusual source...</p><a data-post-link href="https://nedstranger.substack.com/p/5-why-did-she-want-to-stay-with-her-008">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>		
+          <div class="description-item">
+            <h3>Philosophical</h3>
+            <p>
+              An exploration of monogamy, non-monogamy, truth, freedom, and whether our ideals can survive contact with real life.
+            </p>
+          </div>
+
+          <div class="description-item">
+            <h3>Uncomfortable</h3>
+            <p>
+              Not a manifesto and not a tidy self-help book — more an honest attempt to think clearly in the middle of fear, longing, jealousy, and love.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <hr>
-
-    <section id="newsletter" class="container">
-        <h2 class="section-title">Newsletter</h2>
-        <p>Get selected articles straight to your inbox.</p>
-        <iframe src="https://nedstranger.substack.com/embed" 
-                width="100%" 
-                height="220" 
-                style="border:1px solid var(--color-secondary-accent); background:var(--color-light);" 
-                frameborder="0" 
-                scrolling="no">
-        </iframe>
-    </section>
-    
-    <hr>
-
-    <section id="podcast" class="container">
-        <h2 class="section-title">Podcast</h2>
-        <div class="content-section">
-            <div class="content-image">
-                <img src="/assets/images/polyriskreward-square.png" alt="PolyRiskReward Podcast Cover Art">
-            </div>
-            <div class="content-text">
-                <p>For fans of an auditory experience, I tell the story from start to finish, pausing at certain points on the journey to reflect on specific questions around non-monogamy, jealousy, relationship rules and communication.</p>
-                <p>Listen now on your favorite platform:</p>
-                <div class="streaming-links" style="font-size: 2.5rem;">
-                    <a href="https://open.spotify.com/show/3ABayVqYtDzj9qvRqpatR2?si=5a9b9bfba22a4f4a" target="_blank" title="Listen on Spotify"><i class="fab fa-spotify"></i></a>
-                    <a href="https://podcasts.apple.com/gb/podcast/poly-risk-reward/id1835407509" target="_blank" title="Listen on Apple Podcasts"><i class="fas fa-podcast"></i></a>
-                    <a href="https://www.youtube.com/playlist?list=PLLaoGpqlR5SbCwvYfcxacAsJ7USm0DCVn" target="_blank" title="Listen on YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://music.amazon.co.uk/podcasts/a71e696d-b8f2-4c25-8e3f-46b46ee91c06/poly-risk-reward" target="_blank" title="Listen on Amazon"><i class="fa-brands fa-amazon"></i></a>
-                </div>
-            </div>
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="./polyriskreward/assets/images/nedstrangerabout">
+          Placeholder for author photo
         </div>
-    </section>
 
-    <hr>
-
-    <section id="book" class="container">
-        <h2 class="section-title">The Book</h2>
-        <div class="content-section reverse">
-            <div class="content-image">
-                <img src="/assets/images/PolyRiskReward-book.jpg" alt="Cover of the PolyRiskReward Book">
-            </div>
-            <div class="content-text">
-                <p>I'm currently editing the draft of the book version of Poly Risk Reward, telling the full story in much more detail and exploring the philosophy and science of alternative relationship styles and unusual parenting.</p>
-                <p>To find out how to get your hands on one of the very first copies, drop me a message using the contact form below!</p>
-            </div>
+        <div class="about-copy">
+          <div class="section-header">
+            <h2>About the author</h2>
+          </div>
+          <p>
+            I'm a songwriter, storyteller and unapologetic oversharer. After graduating from Cambridge with a Law Masters, I moved to London to seek my fortune as a musician, realising too late that I'd done the law-music switch the wrong way round. 
+          </p>
+          <p>
+            Nonetheless, with my bandmate and best friend Vedantha Kumar, I grew our indie-folk group August and After to millions of listeners across the world with features on Official Spotify playlists, BBC Radio, The Independent, Kerrang! and Songwriting Magazine.  
+          </p>
+          <p>
+            In 2018 I met Anya, a polyamorous, Latvian-born painter and together we moved around Europe before settling in Vienna, where I launched my solo music act Ned Stranger and explored the risks and rewards of open marriage, inadvertently living the story that would become this book.
+          </p>
+          <a href="#preorder" class="btn btn-secondary">Pre-order the book</a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <hr>
-
-    <section id="contact" class="container">
-        <h2 class="section-title">Get in Touch</h2>
-        <p>For speaking requests, collaborations, or general inquiries, please use the form below.</p>
-        <div class="contact-form">
-                <form action="https://formspree.io/f/mpwjpadn" method="post">
-                <input type="hidden" name="_subject" value="New Contact Form Submission">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Ned Stranger. All rights reserved.</p>
-        <p>Email me via nedstranger(at)gmail(dot)com</p>
-    </footer>
-
-    <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('section, hr');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                // Ensure the Hero section doesn't have the initial animation offset
-                if (section.id !== 'home') {
-                    section.style.opacity = 0;
-                    section.style.transform = 'translateY(20px)';
-                    section.style.transition = 'opacity 1s ease, transform 1s ease';
-                }
-                observer.observe(section);
-            });
-        });
-    </script>
+  <footer class="footer">
+    <div class="container">
+      Poly Risk Reward — Book pre-orders open now.
+    </div>
+  </footer>
 </body>
 </html>

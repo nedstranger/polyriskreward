@@ -253,6 +253,16 @@
       margin-bottom: 24px;
     }
 
+    .preorder-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .preorder-options .btn {
+      width: 100%;
+    }
+
     .form-grid {
       display: grid;
       gap: 16px;
@@ -457,8 +467,8 @@
           </p>
 
           <div class="hero-points">
-            <span>Hardback — €24</span>
-            <span>+ postage (or hand delivery in Vienna)</span>
+            <span>Hardback — from €24</span>
+            <span>Free hand delivery in Vienna</span>
           </div>
 
           <div class="hero-actions">
@@ -470,13 +480,17 @@
         <aside class="card preorder-card" id="preorder">
           <h2>Reserve your copy</h2>
           <p class="price-note">
-            €24 + postage. Hand delivery may be possible in Vienna.
+            Choose your delivery option. You'll be taken to Stripe to complete your order.
           </p>
 
-          <a href="https://buy.stripe.com/fZu7sL8DZ8yk2gs5cJ5J601" class="btn btn-primary" target="_blank" rel="noopener">Pre-order — €24</a>
+          <div class="preorder-options">
+            <a href="https://buy.stripe.com/5kQcN5aM7aGs2gsgVr5J604" class="btn btn-primary" target="_blank" rel="noopener">Vienna hand delivery — €24</a>
+            <a href="https://buy.stripe.com/7sY6oHcUfcOA5sEeNj5J605" class="btn btn-primary" target="_blank" rel="noopener">Post within EU — €29</a>
+            <a href="https://buy.stripe.com/cNidR94nJ9Co8EQ34B5J606" class="btn btn-primary" target="_blank" rel="noopener">Post rest of world — €39</a>
+          </div>
 
           <p class="smallprint">
-            You'll be taken to Stripe to complete your order. Name, email and delivery address are collected there.
+            Name, email and delivery address are collected at checkout.
           </p>
         </aside>
       </div>

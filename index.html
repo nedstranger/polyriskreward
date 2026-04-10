@@ -129,13 +129,22 @@
 
     .book-grid {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 0.9fr 1.1fr;
       gap: 40px;
       align-items: center;
     }
 
+    .book-grid .book-copy {
+      order: -1;
+    }
+
     .book-cover {
-      width: 220px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .book-cover img {
       border-radius: 6px;
       box-shadow: 0 12px 40px rgba(80, 60, 20, 0.18);
     }
@@ -381,12 +390,10 @@
 
       .book-grid {
         grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
       }
 
-      .book-cover {
-        width: 180px;
+      .book-grid .book-copy {
+        order: 0;
       }
     }
 
@@ -421,9 +428,6 @@
         padding-top: 48px;
       }
 
-      .book-cover {
-        width: 150px;
-      }
     }
   </style>
 </head>
@@ -478,14 +482,20 @@
 
     <section class="section" id="book">
       <div class="container">
-        <div class="section-header">
-          <h2>About the book</h2>
-        </div>
         <div class="book-grid">
-          <img src="/assets/images/PolyRiskReward-BookCoverV1.png" alt="Poly Risk Reward book cover" class="book-cover" />
-          <p style="color: var(--color-muted); font-size: 1.05rem; line-height: 1.75;">
-            In 2024, my wife and I received the results of a DNA paternity test that showed I'm not our daughter's biological father. We'd been in a happily open marriage since 2020, and although we knew the risks, we didn't expect her to get pregnant with another man. The book tells the story from start to finish in forensic detail, describing how our open marriage started, how polyamorous dating works in practice, why we did the test, how we responded to it, and what the future looks like, especially with the biological father.
-          </p>
+          <div class="book-cover">
+            <img src="/assets/images/PolyRiskReward-BookCoverV1.png" alt="Poly Risk Reward book cover">
+          </div>
+
+          <div class="about-copy book-copy">
+            <div class="section-header">
+              <h2>About the book</h2>
+            </div>
+            <p>
+              In 2024, my wife and I received the results of a DNA paternity test that showed I'm not our daughter's biological father. We'd been in a happily open marriage since 2020, and although we knew the risks, we didn't expect her to get pregnant with another man. The book tells the story from start to finish in forensic detail, describing how our open marriage started, how polyamorous dating works in practice, why we did the test, how we responded to it, and what the future looks like, especially with the biological father.
+            </p>
+            <a href="#preorder" class="btn btn-secondary">Pre-order the book</a>
+          </div>
         </div>
       </div>
     </section>
